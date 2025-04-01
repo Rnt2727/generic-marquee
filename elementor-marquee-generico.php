@@ -356,125 +356,23 @@ if (!file_exists($assets_dir)) {
 // Crear archivo CSS si no existe
 $css_file = $assets_dir . '/css/style.css';
 if (!file_exists($css_file)) {
-    file_put_contents($css_file, ':root {
-    --font2: \'Segoe UI\', Roboto, \'Helvetica Neue\', sans-serif;
+    file_put_contents($css_file, '
+	
+	
+	
+	
+	:root {
+    --font2: "Nunito Sans", sans-serif;
     --heading: #2d3748;
     --primary: #4f46e5;
     --primary-hover: #4338ca;
 }
 
-.elementor-widget-marquee_generico .marquee-container {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    width: 100%;
-    background: linear-gradient(90deg, #f9fafb 0%, #f3f4f6 100%);
-    padding: 16px 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
 
-.elementor-widget-marquee_generico .marquee-wrapper {
-    display: flex;
-    width: max-content;
-    animation: marquee 20s linear infinite;
-}
 
-.elementor-widget-marquee_generico .item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    padding: 0 8px;
-}
 
-.elementor-widget-marquee_generico .jws-marquee .icon_text_bg .icon_text a {
-    background-color: #FFF;
-    box-shadow: 0 4px 12px rgba(16,30,87,0.08);
-    border-radius: 50px;
-    padding: 4px 16px;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-family: var(--font2);
-    color: var(--heading);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 1px solid #e5e7eb;
-    height: 48px;
-}
-
-.elementor-widget-marquee_generico .jws-marquee .icon_text_bg .icon_text a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(16,30,87,0.12);
-    color: var(--primary);
-}
-
-.elementor-widget-marquee_generico .mar-icon {
-    margin-right: 12px;
-    font-size: 20px;
-    transition: transform 0.3s ease;
-}
-
-.elementor-widget-marquee_generico .jws-marquee .icon_text_bg .icon_text a:hover .mar-icon {
-    transform: scale(1.1);
-}
-
-.elementor-widget-marquee_generico .mar-text {
-    font-size: 14px;
-    margin-right: 8px;
-}
-
-.elementor-widget-marquee_generico .arrow-circle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    background-color: var(--primary);
-    color: white;
-    border-radius: 50%;
-    margin-left: 4px;
-    transition: all 0.3s ease;
-}
-
-.elementor-widget-marquee_generico .arrow-circle svg {
-    width: 10px;
-    height: 10px;
-}
-
-.elementor-widget-marquee_generico .jws-marquee .icon_text_bg .icon_text a:hover .arrow-circle {
-    background-color: var(--primary-hover);
-    transform: scale(1.1);
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.elementor-widget-marquee_generico .marquee-container::before,
-.elementor-widget-marquee_generico .marquee-container::after {
-    content: \'\';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100px;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.elementor-widget-marquee_generico .marquee-container::before {
-    left: 0;
-    background: linear-gradient(90deg, #f9fafb 0%, transparent 100%);
-}
-
-.elementor-widget-marquee_generico .marquee-container::after {
-    right: 0;
-    background: linear-gradient(90deg, transparent 0%, #f9fafb 100%);
-}');
+');
 }
 
 // Crear archivo JS si no existe
